@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{reciever.username}}</title>
+    <link rel="icon" href="{{ reciever.profile_picture.url }}">
+    <script src="https://kit.fontawesome.com/5564fd2102.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css\dm.css' %}">
+</head>
+<body>
+    <header>
+
+        <a href="{% url 'profile' reciever.id %}" style="text-decoration: none; color: black;">
+            <div class="post-head"><div class="profile-pic" style="background-image: url({{reciever.profile_picture.url}});"></div>{{reciever}}</div></a>
+
+    </header>
+    <section>
+    <div class="msg-container">
+    
+            {% for message in messages %} 
+            {% if message in sentmessages %}
+            <div class="msg send-msg">
+                <!-- <p style="background-color: brown;">{{ message.sender.username }} - {{ message.content }} - {{ message.timestamp }}</p> -->
+                <p  id="send">{{message.content}}</p> <p id="send" class="pic" style="background-image: url({{sender.profile_picture.url}});"></p>
+            </p>
+                {% endif %}
+            {% if message in recievedmessages %}
+            <div class="msg recieve-msg">
+                <!-- <p style="background-color: blueviolet;">{{ message.sender.username }} - {{ message.content }} - {{ message.timestamp }}</p> -->
+                <p id="recieve" class="pic" style="background-image: url({{reciever.profile_picture.url}});"></p>
+            </p><p id="recieve">{{ message.content }}</p>
+            </div>
+                {% endif %}
+            {% endfor %}
+            
+    </div>
+</section>
+<footer>
+
+    <div class="send-message">
+        <form method="post" action="{% url 'send_dm' id %}" class="msg">
+            {% csrf_token %}
+            <input type="text" name="content" required class="msg-box">
+            <button type="submit" class="send-btn send">Send</button>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

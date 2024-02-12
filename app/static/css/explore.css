@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300&family=Kalnia:wght@100&family=Mochiy+Pop+One&family=Nova+Square&family=Poppins:wght@300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-picture{
+
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid  rgb(219, 219, 219);
+
+
+}
+
+.users{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    border: 1px solid  rgb(219, 219, 219);
+    margin-top: 2%;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    height: 6vh;
+    width: 100vw;
+    align-items: center;
+    border-top: 1px solid  rgb(219, 219, 219);
+    background-color: white;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.users{
+    padding: 1%;
+    border-radius: 8px;
+    margin-bottom: 1%;
+}
+
+.profile-picture{
+    border-radius: 50%;
+    height: 8vh;
+    width: 8vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 7px 20px 7px 20px;
+    border-radius: 8px;
+    margin-right: 10px;
+    border: 1px solid  rgb(219, 219, 219);
+}

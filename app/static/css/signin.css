@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300&family=Kalnia:wght@100&family=Mochiy+Pop+One&family=Nova+Square&family=Poppins:wght@300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+#instagramam{
+    font-family: 'Caveat', cursive;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box{
+
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.image-box{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    height: 40vh;
+    width: 97vw;
+    overflow: hidden;
+    z-index: -2;
+}
+
+input{
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 7px 15px 7px 15px;
+    border-radius: 8px;
+    border: 1px solid  rgb(219, 219, 219);
+
+}
+a{
+    text-decoration: none;
+}
+.login-button{
+    margin-bottom: 15px;
+    width: 330px;
+}

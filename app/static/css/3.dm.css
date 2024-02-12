@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300&family=Kalnia:wght@100&family=Mochiy+Pop+One&family=Nova+Square&family=Poppins:wght@300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+header{
+    height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid  rgb(219, 219, 219);
+}
+
+.post-head{
+    background-color: rgba(249, 249, 249, 0.047);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic{
+    height: 7vh;
+    width: 7vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 2%;
+    margin-left: 10%;
+}
+.pic{
+    height: 7vh;
+    width: 7vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20%;
+    margin-left: 2%;
+}
+/*  */
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg-container{
+    height: 80vh;
+    width: 85vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg{
+    height: 7vh;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    
+}
+
+.send-msg{
+   
+   text-align: right;
+}
+
+.recieve-msg{
+   
+    text-align: left;
+    
+}
+
+p{
+   
+    display: inline;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    
+
+}
+
+#send{
+    background-color:   rgb(219, 219, 219);
+}
+
+#recieve{
+    background-color:   rgb(189, 189, 189);
+}
+
+/*  */
+.send-message{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+    border-top: 1px solid  rgb(219, 219, 219);
+}
+
+
+.msg-box{
+    border-radius: 8px;
+        
+            border: 2px solid  rgb(219, 219, 219);
+            height: 5vh;
+            width: 75vw;
+            
+}
+
+.send{
+    cursor: pointer;
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            padding: 7px 17px 7px 17px;
+            border-radius: 8px;
+        
+            border: 2px solid  rgb(219, 219, 219);
+}
+
+
+.msg-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.msg-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300&family=Kalnia:wght@100&family=Mochiy+Pop+One&family=Nova+Square&family=Poppins:wght@300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+#instagramam{
+    font-family: 'Caveat', cursive;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container{
+    margin-top: 40px;
+    width: 90vw;
+}
+
+
+.custom-file-upload {
+  
+    padding: 7px 50px 7px 50px;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 7px 50px 7px 50px;
+    border-radius: 8px;
+    border: 1px solid  rgb(219, 219, 219);
+}
+
+
+
+input[type="file"] {
+
+    display: none;
+
+}
+
+label[for="id_profile_picture"] {
+font-weight: normal;
+
+}
+.submit{
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 7px 50px 7px 50px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid  rgb(219, 219, 219);
+}
+form{
+    border: 1px solid  rgb(219, 219, 219);
+    padding: 4%;
+    border-radius: 8px;
+}

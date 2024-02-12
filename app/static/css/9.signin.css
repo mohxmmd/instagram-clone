@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300&family=Kalnia:wght@100&family=Mochiy+Pop+One&family=Nova+Square&family=Poppins:wght@300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-pic1{
+    margin-top: 4%;
+    width: 30%;
+    
+}
+.hero-pic2{
+    margin-top: 4%;
+    width: 16.5%;
+    height: 73%;
+    position: absolute;
+    left: 33.4%;
+    top:3.5%;
+    z-index: 1;
+
+}
+
+
+.signin-box{
+    border: 1px solid  rgb(219, 219, 219);
+    height: 55vh;
+    width: 23vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.signup-box{
+    margin-top: 5%;
+    border: 1px solid  rgb(219, 219, 219);
+    height: 10vh;
+    width: 23vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin-box h2{
+    font-family: 'Caveat', cursive;
+}
+
+.signin-box form{
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+
+.login-button{
+    width: 87%;
+    height: 34%;
+    background-color: rgb(0, 149, 246);
+    border: none;
+    color: white;
+    margin-top: 5%;
+    border-radius: 8px;
+}

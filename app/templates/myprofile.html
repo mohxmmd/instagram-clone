@@ -1,0 +1,67 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.username}}-Profile</title>
+    <link rel="icon" href="{{user.profile_picture.url}}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+    <style>
+        .img-box{
+    height: 42vh;
+    width: 21vw;
+    border: 1px solid  rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.profile-picture{
+    height: 40vh;
+    width: 20vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bio{
+    height: 6vh;
+    width: 25vw;
+    border: 1px solid  rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 8px;
+
+}
+.submit{
+            cursor: pointer;
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            padding: 7px 50px 7px 50px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid  rgb(219, 219, 219);
+        }
+    </style>
+</head>
+<body>
+    <main>
+    
+        <div class="img-box"><div class="profile-picture" style="background-image: url({{user.profile_picture.url}});"></div></div><br>
+        <div class="bio">Name :{{user.first_name}} {{user.last_name}}</div>
+        <div class="bio">Username:{{user.username}}</div>
+        <div class="bio">{{user.bio}}</div>
+        <br>
+        
+        <button class="submit">Change Profile Picture</button>
+        <button class="submit">Change Bio</button>
+        
+        
+    </main>
+    
+</body>
+</html>

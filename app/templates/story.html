@@ -1,0 +1,20 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>story-{{story.user.username}}</title>
+    <link rel="icon" href="{{ story.user.profile_picture.url }}">
+    <link rel="stylesheet" href="{% static 'css/story.css' %}">
+    <script src="https://kit.fontawesome.com/5564fd2102.js" crossorigin="anonymous"></script>
+</head>
+<a href="{% url 'home' %}">
+<body>
+    <main style="width: 100vw; height: 100vh;display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div class="storyview" style="background-image: url({{story.image.url}})">
+    </div>
+    </main>
+</body>
+</a>
+</html>

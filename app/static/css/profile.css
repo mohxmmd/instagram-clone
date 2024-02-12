@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300&family=Kalnia:wght@100&family=Mochiy+Pop+One&family=Nova+Square&family=Poppins:wght@300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box{
+    height: 40vh;
+    width: 40vh;
+    border: 1px solid  rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.profile-picture{
+    height: 38vh;
+    width: 38vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+.bio{
+    height: 7vh;
+    width: 80vw;
+    border: 1px solid  rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: small;
+    font-weight: 500;
+
+}
+.submit{
+            cursor: pointer;
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            padding: 7px 50px 7px 50px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid  rgb(219, 219, 219);
+        }

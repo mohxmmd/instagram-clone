@@ -1,0 +1,42 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="stylesheet" href="{% static 'css/comments.css' %}">
+    <link rel="icon" href="{% static 'images\village.logo.png'%}">
+</head>
+<body>
+
+<main>
+
+    <div class="commentbox">
+    
+    {% for comment in comments %}
+    <div class="comment">
+
+    <div class="profile-pic" style="background-image: url({{comment.user.profile_picture.url}});"></div><div style="min-width: 120px;"><p >{{comment.user.username}}</p></div><p>{{comment.content}}</p>
+
+    </div>
+    {% endfor %}
+
+    </div>
+
+    
+</main>
+
+    <footer>
+
+        <div class="send-message">
+            <form method="post"  class="msg">
+                {% csrf_token %}
+                <input type="text" name="content" required class="msg-box">
+                <button type="submit" class="send">Send</button>
+            </div>
+        </footer>
+
+</footer>
+</body>
+</html>

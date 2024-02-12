@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaGramam-Home</title>
+    <link rel="icon" href="static\images\outdoors.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5564fd2102.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+<!--  -->
+<header>
+    <h4 id="instagramam">InstaGramam</h4>
+    <a href="{% url 'chat' %}" style="text-decoration: none; color: black;"><h4 style="margin-right: 3%; margin-top: 3%;"><i class="fa-brands fa-facebook-messenger"></i></h4></a>
+</header>
+<!--  -->
+<div class="story-container">
+   <a href="{% url 'addstory' %}" style="text-decoration: none; color: black;"> <div class="story" style="background-image: url({{user.profile_picture}});border: 2.5px solid rgb(219, 219, 219);" >
+        <div style="background-color: white; border-radius: 50%; height: 3.5vh; width: 3.5vh; display: flex; align-items: center; justify-content: center;margin-left: 33px; margin-top: 33px;border: 1px solid  rgb(219, 219, 219);"><h3>+</h3></div>
+    </div></a>
+    {% for story in stories %}
+                
+                    <a href="{% url 'story' story.id %}"><div class="story" style="background-image: url({{story.user.profile_picture}});">
+
+                </div></a>
+           
+     {% endfor %}
+</div>
+<!--  -->
+<section style="padding-bottom: 6vh;">
+        {% for post in posts %}
+            <div class="post">
+                <a href="{% url 'profile' post.user.id %}" style="text-decoration: none; color: black;">
+                <div class="post-head"><div class="profile-pic" style="background-image: url({{post.user.profile_picture}});"></div>{{post.user}}</div></a>
+            
+                <div class="post-image" style="background-image: url({{post.image}});">
+                </div>
+                <a href="{% url 'comment' post.id %}">
+                <div class="post-caption" style="height: 15vh; box-sizing: border-box;">
+                
+                    <br><p style="padding: 5px;">{{post.caption}} </p></div></a>
+                
+            </div>
+            {% endfor %}
+        </div>
+</section>
+<footer>
+    <a href="{% url 'home' %}"><i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="{% url 'explore' %}"><i class="fa fa-search" aria-hidden="true"></i></a>
+    <a href="{% url 'addpost' %}"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+    <a href="{% url 'explore' %}"><i class="fa-solid fa-film"></i></a>
+    <a href="{% url 'profile' user.id %}"><div class="post-image" style="background-image: url({{user.profile_picture}}); width: 4vh; height: 4vh; border-radius: 50%;" ></div></a>
+
+</footer>
+
+</body>
+</html>
